@@ -1,0 +1,75 @@
+
+A) Crear un archivo llamado ejercicio1, que contenga las 17 últimas líneas del texto que proporciona la orden man para la orden chmod (se debe hacer en una única línea de órdenes y sin utilizar el metacarácter ";").
+
+alex@alex-VirtualBox:~/Escritorio$ (man chmod | tail -17) >  ejercicio1.txt (Enviamos el manual de chmod al ejercicio1.txt con la orden tail -17 para que muestre las ultimas 17 lineas.)
+
+alex@alex-VirtualBox:~/Escritorio$ cat ejercicio1.txt (Abro el archivo y compruebo lo que se ha copiado.)
+      
+       Written by David MacKenzie and Jim Meyering.
+
+REPORTING BUGS
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+       Report any translation bugs to <https://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright © 2020 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       chmod(2)
+
+       Full documentation <https://www.gnu.org/software/coreutils/chmod>
+       or available locally via: info '(coreutils) chmod invocation'
+
+GNU coreutils 8.32                                                                           February 2022                                                                                    CHMOD(1)
+
+***************************************************************************************************************************************************************************************
+
+B) Al final del archivo ejercicio1, añadir la ruta completa del directorio de trabajo actual.
+
+alex@alex-VirtualBox:~/Escritorio$ pwd >> ejercicio1.txt (Añadir la ruta actual de trabajo al archivo sin sobrescribir nada.)
+
+Al archivo anterior se ha añadido en la ultima linea lo siguiente:
+
+/home/alex/Escritorio
+
+***************************************************************************************************************************************************************************************
+
+C) Usando la combinación de órdenes mediante paréntesis, crear un archivo llamado ejercicio3 que contendrá el listado de usuarios conectados al sistema (orden who) y la lista de archivos del directorio actual.
+
+alex@alex-VirtualBox:~/Escritorio$ (who;ls) > ejercicio3
+
+alex@alex-VirtualBox:~/Escritorio$ cat ejercicio3
+
+alex     tty2         2023-10-30 11:41 (tty2)
+
+Ejercicio 1 Sesión 2
+ejercicio1.txt
+ejercicio3
+GitHub
+
+***************************************************************************************************************************************************************************************
+
+D) Añadir, al final del archivo ejercicio3, el número de líneas, palabras y caracteres del archivo ejercicio1. Asegúrese de que, por ejemplo, si no existiera ejercicio1 , los mensajes de error tambien se añadieran al final de ejercicio3.
+
+alex@alex-VirtualBox:~/Escritorio$ wc ejercicio1.txt >> ejercicio3.txt
+
+alex@alex-VirtualBox:~/Escritorio$ cat ejercicio3
+
+alex     tty2         2023-10-30 11:41 (tty2)
+Ejercicio 1 Sesión 2
+ejercicio1.txt
+ejercicio3
+GitHub
+18  80 889 ejercicio1.txt
+
+***************************************************************************************************************************************************************************************
+
+
+E) Con una sola orden chmod, cambiar los permisos de los archivos ejercicio 1 y ejercicio3, de forma que se quite el permiso de lectura al "grupo" y se dé permiso de ejecución a las tres categorias de usuarios.
+
+chmod g-r,a+x ej*
+
+-rwx-wxr-x 1 alex alex  889 oct 30 13:29  ejercicio1.txt
+-rwx-wxr-x 1 alex alex  128 oct 30 17:34  ejercicio3.txt
+
