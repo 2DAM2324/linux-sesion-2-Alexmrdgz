@@ -1,0 +1,71 @@
+
+-Dar permiso de ejecución al "resto de usuarios".
+
+ls -l
+
+-rw-rw-r-- 1 alex alex  206 oct 23 12:41 Ejercicio1.txt
+
+Comando: chmod o+x Ejercicio1.txt
+
+ls -l (Tras cambiar permisos)
+
+-rw-rw-r-x 1 alex alex  206 oct 23 12:41 Ejercicio1.txt
+
+**************************************************************************************************************
+
+-Dar permiso de escritura y ejecución al "grupo".
+
+ls -l
+
+-rw-rw-r-- 1 alex alex  291 oct 23 13:01 Ejercicio2.txt
+
+Comando: chmod g+wx Ejercicio2.txt
+
+ls -l (Tras cambiar los permisos)
+
+-rw-rwxr-- 1 alex alex  291 oct 23 13:01 Ejercicio2.txt
+
+**************************************************************************************************************
+
+-Quitar permiso de lectura al "grupo" y al "resto de usuarios".
+
+ls -l
+
+-rw-rw-r-- 1 alex alex  427 oct 23 13:17 Ejercicio3.txt
+
+Comando: chmod go-r Ejercicio3.txt
+
+ls -l (Tras cambiar los permisos)
+
+-rw--w---- 1 alex alex  427 oct 23 13:17 Ejercicio3.txt
+
+**************************************************************************************************************
+
+-Dar permiso de ejecución al "propietario"y permiso de escritura al "resto de usuarios".
+
+ls -l
+
+-rw-rw-r-- 1 alex alex 2116 oct 23 20:48 Ejercicio4.txt
+
+Comando: chmod u+x,o+w
+
+ls -l (Tras cambiar los permisos)
+
+-rwxrw-rw- 1 alex alex 2116 oct 23 20:48 Ejercicio4.txt
+
+**************************************************************************************************************
+
+-Dar permiso de ejecución al "grupo" de todos los archivos cuyo nombre comience con la letra "e".
+
+ls -l
+
+-rw-rw-r-- 1 alex alex 1045 oct 23 21:00 ejercicio5.txt
+-rw-rw-r-- 1 alex alex  849 oct 23 21:16 ejercicio6.txt
+
+Comando: chmod g+x e*
+
+ls -l (Tras cambiar los permisos)
+
+-rw-rwxr-- 1 alex alex 1045 oct 23 21:00 ejercicio5.txt
+-rw-rwxr-- 1 alex alex  849 oct 23 21:16 ejercicio6.txt
+
