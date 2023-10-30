@@ -1,0 +1,52 @@
+
+-Crear un archivo llamado ej31, que contendrá el nombre de los archivos del directorio padre del directorio de trabajo.
+
+alex@alex-VirtualBox:~/Escritorio$ touch ej31.txt (Crear archivo de texto.)
+
+alex@alex-VirtualBox:~/Escritorio$ ls .. > ej31.txt (Enviar al archivo de texto lo que se muestra con el comando ls .. mediante un cauce.)
+
+alex@alex-VirtualBox:~/Escritorio$ cat ej31.txt (Mostrar contenido archivo de texto.)
+
+Descargas
+Documentos
+Escritorio
+Imágenes
+Música
+Plantillas
+Público
+snap
+usuario
+Vídeos
+
+*******************************************************************************************************
+
+-Crear un archivo llamado ej32, que contendrá las dos ultimas líneas del archivo creado en el ejercicio anterior.
+
+alex@alex-VirtualBox:~/Escritorio$ tail -n 2 ej31.txt > ej32.txt (Envio las dos ultimas lineas del archivo ej31.txt a un nuevo archivo de texto llamado ej32.txt mediante un cauce.)
+
+alex@alex-VirtualBox:~/Escritorio$ cat ej32.txt (Abro el archivo y compruebo lo que se ha copiado.)
+
+usuario
+Vídeos
+
+*******************************************************************************************************
+
+-Añadir al final del archivo ej32, el contenido del archivo ej31.
+
+alex@alex-VirtualBox:~/Escritorio$ cat ej31.txt >> ej32.txt (En este cauce indico mediante >> que no se sobreescriba lo existente en el archivo donde enviamos el texto de ej31.txt)
+
+alex@alex-VirtualBox:~/Escritorio$ cat ej32.txt (Abro el archivo y compruebo lo que se ha copiado.)
+
+usuario
+Vídeos
+Descargas
+Documentos
+Escritorio
+Imágenes
+Música
+Plantillas
+Público
+snap
+usuario
+Vídeos
+
