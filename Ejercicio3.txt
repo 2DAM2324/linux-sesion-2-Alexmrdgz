@@ -1,0 +1,30 @@
+
+-Mostrar por pantalla, el listado (en formato largo) de los ultimos 6 archivos del directorio padre en el directorio de trabajo.
+
+alex@alex-VirtualBox:~/Escritorio$ ls .. -l | tail -6
+
+drwxr-xr-x 2 alex alex 4096 oct 23 13:07 Música
+drwxr-xr-x 2 alex alex 4096 oct 16 12:57 Plantillas
+drwxr-xr-x 2 alex alex 4096 oct 16 12:57 Público
+drwx------ 5 alex alex 4096 oct 16 13:13 snap
+drwxrwxr-x 3 alex alex 4096 oct 23 12:36 usuario
+drwxr-xr-x 2 alex alex 4096 oct 16 12:57 Vídeos
+
+*************************************************************************************************
+
+-La orden wc muestra por pantalla el numero de líneas, palabras y caracteres de un archivo. Utilizando dicha orden, mostrar por pantalla el número de caracteres (sólo ese número) de los archivos del directorio de trabajo que comiencen por los caracteres "e" o "f".
+
+alex@alex-VirtualBox:~/Escritorio$ wc -m e* f* (Primera forma de hacerlo)
+
+87 ej31.txt
+102 ej32.txt
+0 fejemplo.txt
+189 total
+
+alex@alex-VirtualBox:~/Escritorio$ wc -m [ef]* (Segunda forma de hacerlo)
+
+87 ej31.txt
+102 ej32.txt
+0 fejemplo.txt
+189 total
+
